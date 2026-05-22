@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patient Hub (Demo) — zzzwell</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html"><span class="dot"></span> zzzwell</a>
+    <nav class="nav-links">
+      <a href="sleep.html">Sleep Medicine</a>
+      <a href="orthodontists.html">Orthodontists</a>
+      <a href="omfs.html">Jaw Surgeons</a>
+      <a href="glp1.html">GLP-1 for OSA</a>
+      <a href="pap-labs.html">PAP &amp; Sleep Labs</a>
+      <a href="advocates.html">Advocates</a>
+      <a href="hall-of-shame.html">Hall of Shame</a>
+      <a href="marketplace.html">Marketplace</a>
+      <a href="bundles.html">Bundles</a>
+      <a href="patient.html" class="active">Patient Hub</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="section-head">
+    <span class="eyebrow">Your records</span>
+    <h2>Patient Hub <span style="font-size:.5em;color:var(--ink-soft);font-weight:700">(DEMO)</span></h2>
+    <p>Log symptoms, link your medical records, ask the assistant, and forward everything to a doctor who auto-schedules you — all in one place, with your record kept portable.</p>
+  </section>
+
+  <div class="disclaimer" style="background:#fde8e6;border-color:#f4b5b0;color:#8a2018">
+    <strong>⚠️ Demo — do not enter real medical information.</strong> A static site is <strong>not HIPAA-compliant</strong> and cannot lawfully store or transmit real protected health information (PHI). Everything here stays <strong>only in your browser (localStorage)</strong> — nothing is sent, stored on a server, or shared. Real EHR linking (Flexpa), payments, AI answers, and doctor forwarding require a HIPAA-compliant backend, a signed BAA, encryption, OAuth, and consent. This is not medical advice. In an emergency call 911.
+  </div>
+
+  <!-- 1. EHR linking via Flexpa -->
+  <div class="module" id="ehr">
+    <h3>① Link your medical records</h3>
+    <p class="sub">Connect your insurer/provider via <strong>Flexpa</strong> (patient-access FHIR API) so your record lives with you here. <em>Demo connect — no real data is retrieved.</em></p>
+    <div id="ehrState"></div>
+    <button class="btn btn-primary" id="flexpaBtn">🔗 Connect with Flexpa (demo)</button>
+    <p class="sub" style="margin-top:14px">Real build: Flexpa Link → patient authorizes → FHIR <code>$everything</code> pulled over HTTPS into a HIPAA-compliant store; record stays patient-portable and exportable.</p>
+  </div>
+
+  <!-- 2. Symptom log -->
+  <div class="module" id="symptoms">
+    <h3>② Symptom log</h3>
+    <p class="sub">Track symptoms over time. This one actually works and persists in your browser.</p>
+    <div class="form-row">
+      <label class="field">Date<input type="date" id="sDate"></label>
+      <label class="field">Symptom<input type="text" id="sName" placeholder="e.g. morning headache, daytime fatigue"></label>
+    </div>
+    <div class="form-row" style="margin-top:12px">
+      <label class="field">Severity: <span id="sevVal">5</span>/10<input type="range" id="sSev" min="1" max="10" value="5"></label>
+      <label class="field">Notes<input type="text" id="sNote" placeholder="optional context"></label>
+    </div>
+    <button class="btn btn-primary" id="addLog" style="margin-top:14px">+ Add entry</button>
+    <div class="log-list" id="logList"></div>
+  </div>
+
+  <!-- 3. Ask zzzwell AI ($50 unlock) -->
+  <div class="module" id="ai">
+    <h3>③ Ask zzzwell AI</h3>
+    <p class="sub">Unlimited questions about your sleep/airway journey after a one-time unlock.</p>
+    <div id="aiGate"></div>
+  </div>
+
+  <!-- 4. Forward to a doctor + auto-schedule -->
+  <div class="module" id="forward">
+    <h3>④ Forward to a doctor &amp; auto-schedule</h3>
+    <p class="sub">Send your symptom log + linked records + questions to a doctor you choose; you're auto-placed in their scheduling queue. <em>Demo — nothing is actually sent.</em></p>
+    <label class="field">Choose a doctor<select id="docSel"><option>Loading…</option></select></label>
+    <button class="btn btn-primary" id="fwdBtn" style="margin-top:14px">Pay &amp; forward (demo) →</button>
+    <div id="fwdState"></div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <div>© <span id="yr"></span> zzzwell — demo directory.</div>
+    <div class="foot-links"><a href="index.html">Home</a><a href="bundles.html">Bundles</a><a href="omfs.html">Surgeons</a></div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+const LS = {
+  get:(k,d)=>{try{return JSON.parse(localStorage.getItem('zzzwell_'+k))??d}catch(e){return d}},
+  set:(k,v)=>localStorage.setItem('zzzwell_'+k,JSON.stringify(v))
+};
+
+/* ---- 1. Flexpa EHR (demo) ---- */
+const ehrBtn=document.getElementById('flexpaBtn'), ehrState=document.getElementById('ehrState');
+function renderEHR(){
+  const c=LS.get('ehr',null);
+  ehrState.innerHTML = c ? `<div class="pill-on">✓ Connected (demo): ${c.payer} — ${c.records} records linked</div>` : '';
+  ehrBtn.textContent = c ? '🔁 Reconnect (demo)' : '🔗 Connect with Flexpa (demo)';
+}
+ehrBtn.onclick=()=>{
+  // demo: simulate a Flexpa Link authorization result
+  const payers=['Aetna','UnitedHealthcare','Blue Cross','Cigna','Kaiser'];
+  LS.set('ehr',{payer:payers[Math.floor(Math.random()*payers.length)],records:Math.floor(Math.random()*6)+2,at:Date.now()});
+  renderEHR();
+};
+renderEHR();
+
+/* ---- 2. Symptom log (persisted) ---- */
+const sevColors=v=>v<=3?['#62e0b0','rgba(98,224,176,.15)']:v<=6?['#ffd778','rgba(255,214,120,.15)']:['#ff9b92','rgba(255,120,110,.15)'];
+const dEl=document.getElementById('sDate'); dEl.value=new Date().toISOString().slice(0,10);
+document.getElementById('sSev').addEventListener('input',e=>document.getElementById('sevVal').textContent=e.target.value);
+function renderLog(){
+  const list=LS.get('symptoms',[]);
+  const el=document.getElementById('logList');
+  if(!list.length){el.innerHTML='<div class="empty" style="padding:24px">No entries yet.</div>';return;}
+  el.innerHTML=list.slice().reverse().map(s=>{
+    const [c,bg]=sevColors(s.sev);
+    return `<div class="log-item">
+      <div><strong>${s.name}</strong><div class="meta">${s.date}${s.note?' · '+s.note:''}</div></div>
+      <div style="display:flex;align-items:center;gap:10px"><span class="sev" style="color:${c};background:${bg}">${s.sev}/10</span>
+      <button class="x" data-id="${s.id}" title="delete">✕</button></div>
+    </div>`;
+  }).join('');
+  el.querySelectorAll('.x').forEach(b=>b.onclick=()=>{LS.set('symptoms',LS.get('symptoms',[]).filter(x=>x.id!=b.dataset.id));renderLog();});
+}
+document.getElementById('addLog').onclick=()=>{
+  const name=document.getElementById('sName').value.trim(); if(!name){alert('Enter a symptom');return;}
+  const list=LS.get('symptoms',[]);
+  list.push({id:Date.now(),date:dEl.value,name,sev:+document.getElementById('sSev').value,note:document.getElementById('sNote').value.trim()});
+  LS.set('symptoms',list);
+  document.getElementById('sName').value='';document.getElementById('sNote').value='';
+  renderLog();
+};
+renderLog();
+
+/* ---- 3. Ask zzzwell AI ($50 unlock, demo) ---- */
+const gate=document.getElementById('aiGate');
+function renderAI(){
+  if(!LS.get('unlocked',false)){
+    gate.innerHTML=`<div class="locked"><div>One-time unlock for unlimited questions</div>
+      <span class="price">$50</span>
+      <button class="btn btn-primary" id="unlock">Unlock (demo — no charge)</button>
+      <p class="sub" style="margin-top:12px">Real build: Stripe checkout → entitlement on your account.</p></div>`;
+    document.getElementById('unlock').onclick=()=>{LS.set('unlocked',true);renderAI();};
+    return;
+  }
+  gate.innerHTML=`<div class="pill-on" style="margin-bottom:10px">✓ Unlocked — ask anything</div>
+    <div class="chat" id="chat"></div>
+    <div class="row-input"><input id="q" placeholder="Ask about your sleep, airway, options…"><button class="btn btn-primary" id="send">Send</button></div>
+    <p class="sub" style="margin-top:10px">Demo assistant — generic, not diagnostic, not medical advice.</p>`;
+  const chat=document.getElementById('chat');
+  const hist=LS.get('chat',[{role:'ai',text:"Hi! I'm the zzzwell demo assistant. I can help you organize questions and understand options — but I'm not a doctor and this isn't medical advice. What's on your mind?"}]);
+  function paint(){chat.innerHTML=hist.map(m=>`<div class="msg ${m.role}">${m.text}</div>`).join('');chat.scrollTop=chat.scrollHeight;}
+  paint();
+  function reply(q){
+    const n=LS.get('symptoms',[]).length;
+    return `Thanks — here's a general, non-diagnostic take. ${n?`I can see ${n} symptom entr${n===1?'y':'ies'} in your log, which is great to bring to a visit. `:''}For "<em>${q}</em>", I'd suggest writing down when it happens, severity, and triggers, then reviewing options with a qualified clinician (see the directories). If symptoms are severe or sudden, seek urgent care. Want me to draft questions to ask a surgeon?`;
+  }
+  document.getElementById('send').onclick=()=>{
+    const q=document.getElementById('q').value.trim(); if(!q)return;
+    hist.push({role:'user',text:q}); hist.push({role:'ai',text:reply(q)});
+    LS.set('chat',hist); document.getElementById('q').value=''; paint();
+  };
+  document.getElementById('q').addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('send').click();});
+}
+renderAI();
+
+/* ---- 4. Forward to doctor + auto-schedule (demo) ---- */
+(async function(){
+  const sel=document.getElementById('docSel');
+  try{
+    const docs=await (await fetch('data/omfs.json')).json();
+    sel.innerHTML=docs.map(d=>`<option>${d.name} — ${d.org||d.city}</option>`).join('');
+  }catch(e){ sel.innerHTML='<option>Dr. Example — Demo Clinic</option>'; }
+})();
+document.getElementById('fwdBtn').onclick=()=>{
+  const ehr=LS.get('ehr',null), n=LS.get('symptoms',[]).length;
+  const pos=Math.floor(Math.random()*6)+2;
+  document.getElementById('fwdState').innerHTML=`<div class="queue">✓ <b>Forwarded (demo)</b> to ${document.getElementById('docSel').value}.<br>
+    Included: ${n} symptom ${n===1?'entry':'entries'}${ehr?`, linked records from ${ehr.payer}`:''}, and your saved questions.<br>
+    You're <b>#${pos}</b> in their scheduling queue — auto-assigned by the doctor's intake settings.</div>`;
+};
+</script>
+</body>
+</html>
