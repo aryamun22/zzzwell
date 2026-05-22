@@ -35,7 +35,7 @@ function cardHTML(p) {
         <h3>${p.name}</h3>
         ${p.credentials ? `<div class="creds">${p.credentials}</div>` : ""}
       </div>
-      <div class="badges">${p.featured ? '<span class="badge goat">⭐ GOAT</span>' : ''}${badgeFor(p)}</div>
+      <div class="badges">${badgeFor(p)}</div>
     </div>
     ${p.org ? `<div class="org">${p.org}</div>` : ""}
     <div class="loc">📍 ${loc}${p.zip ? " · " + p.zip : ""}</div>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Care Bundles &amp; Recommendations (Demo) — zzzwell</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html"><span class="dot"></span> zzzwell</a>
+    <nav class="nav-links">
+      <a href="sleep.html">Sleep Medicine</a>
+      <a href="orthodontists.html">Orthodontists</a>
+      <a href="omfs.html">Jaw Surgeons</a>
+      <a href="glp1.html">GLP-1 for OSA</a>
+      <a href="pap-labs.html">PAP &amp; Sleep Labs</a>
+      <a href="advocates.html">Advocates</a>
+      <a href="hall-of-shame.html">Hall of Shame</a>
+      <a href="marketplace.html">Marketplace</a>
+      <a href="bundles.html" class="active">Bundles</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="section-head">
+    <span class="eyebrow">Recommendations</span>
+    <h2>Care Bundles <span style="font-size:.5em;color:var(--ink-soft);font-weight:700">(DEMO)</span></h2>
+    <p>Choosing a jaw surgeon? Bundle the whole journey up front — surgeon + orthodontist team + recovery team + a recovery protocol — the way you'd buy a kit, not four separate purchases.</p>
+  </section>
+
+  <div class="disclaimer">
+    <strong>Demo only — nothing is for sale.</strong> Prices are illustrative placeholders, not quotes. Bundling providers does not imply they work together or endorse each other. "Recovery protocol" items are demo concepts with <strong>no efficacy claims</strong> — peptide use must be directed by your surgeon, and many peptides are research-use-only. Not medical advice.
+  </div>
+
+  <div class="anchor-pills" id="anchors"></div>
+
+  <h3 style="margin:24px 0 10px;color:var(--ink)">Frequently bundled together</h3>
+  <div class="fbt" id="fbt"></div>
+
+  <div id="rails"></div>
+
+  <section class="section-head" style="padding-top:24px">
+    <span class="eyebrow">Personalize</span>
+    <h2 style="font-size:26px">Connect your AI agent &amp; your data</h2>
+    <p>Link an assistant and your health data so recommendations are tailored to you. Demo toggles — nothing is actually connected, transmitted, or stored.</p>
+  </section>
+  <div class="connect">
+    <b style="color:var(--ink)">AI agents</b>
+    <div class="connect-grid" id="agents"></div>
+    <b style="color:var(--ink);display:block;margin-top:20px">Your data</b>
+    <div class="connect-grid" id="data"></div>
+    <div class="disclaimer" style="margin:18px 0 0">
+      <strong>Privacy:</strong> a real version would use OAuth scopes and encryption, never store credentials in the browser, and let you revoke access anytime. Health data is sensitive — connect only with informed consent.
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <div>© <span id="yr"></span> zzzwell — demo directory.</div>
+    <div class="foot-links"><a href="index.html">Home</a><a href="omfs.html">Surgeons</a><a href="marketplace.html">Marketplace</a></div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+const money = n => n>0 ? '$'+n.toLocaleString() : 'Ins / varies';
+
+(async function(){
+  let data;
+  try { data = await (await fetch('data/bundles.json')).json(); }
+  catch(e){ document.getElementById('fbt').innerHTML='<div class="empty">Serve over http to load bundles.</div>'; return; }
+
+  const anchorsEl = document.getElementById('anchors');
+  const fbtEl = document.getElementById('fbt');
+  let current = 0;
+
+  function shortLabel(a){ return a.components[0].name.split(',')[0]; }
+
+  anchorsEl.innerHTML = data.anchors.map((a,i)=>
+    `<button class="chip ${i===0?'active':''}" data-i="${i}">${shortLabel(a)}</button>`).join('');
+  anchorsEl.addEventListener('click', e=>{
+    const b=e.target.closest('.chip'); if(!b) return;
+    anchorsEl.querySelectorAll('.chip').forEach(c=>c.classList.remove('active'));
+    b.classList.add('active'); current=+b.dataset.i; renderFBT();
+  });
+
+  function renderFBT(){
+    const a = data.anchors[current];
+    const items = a.components.map((c,idx)=>`
+      <div class="fbt-item">
+        <label class="pick"><input type="checkbox" data-price="${c.price}" ${idx===0?'checked disabled':'checked'}> ${idx===0?'Required':'Add'}</label>
+        <div class="role">${c.role}</div>
+        <h4>${c.name}</h4>
+        <div class="meta">${c.org} · ${c.city}</div>
+        <div class="p">${money(c.price)}</div>
+      </div>`).join('<div class="fbt-plus">+</div>');
+    fbtEl.innerHTML = `
+      <div style="color:var(--ink-soft);font-size:14px;margin-bottom:12px">${a.title}</div>
+      <div class="fbt-row">${items}</div>
+      <div class="fbt-summary">
+        <div class="fbt-total">Bundle total<b id="total">$0</b><span class="fbt-save" id="save"></span></div>
+        <button class="btn btn-primary" onclick="alert('Demo only — no booking or payment is processed.')">Reserve full bundle →</button>
+      </div>`;
+    fbtEl.querySelectorAll('input[type=checkbox]').forEach(cb=>cb.addEventListener('change', recompute));
+    recompute();
+  }
+
+  function recompute(){
+    const checks = [...fbtEl.querySelectorAll('input[type=checkbox]')];
+    const list = checks.reduce((s,c)=> s + (c.checked ? +c.dataset.price : 0), 0);
+    const bundled = Math.round(list * 0.92); // demo 8% bundle discount
+    document.getElementById('total').textContent = money(bundled);
+    document.getElementById('save').textContent = list>0 ? `Bundle saves ${money(list-bundled)} vs. booking separately` : '';
+  }
+
+  // Netflix-style rails
+  document.getElementById('rails').innerHTML = data.carousels.map(r=>`
+    <div class="rail">
+      <h3>${r.title}</h3>
+      <div class="rail-track">
+        ${r.items.map(c=>`<div class="rail-card"><div class="role">${c.role}</div><h4>${c.name}</h4><div class="meta">${c.org} · ${c.city}</div><div class="p">${money(c.price)}</div></div>`).join('')}
+      </div>
+    </div>`).join('');
+
+  renderFBT();
+})();
+
+// Connect toggles (demo)
+const agents = [
+  ['Claude','Anthropic assistant'],['ChatGPT','OpenAI assistant'],
+  ['Your custom agent','Connect via API key'],['Perplexity','Research assistant']
+];
+const sources = [
+  ['Apple Health','Sleep, HR, activity'],['Sleep study (PSG/HSAT)','Upload PDF/EDF'],
+  ['CPAP / OSCAR data','AHI, usage, leaks'],['Oura / Whoop','Wearable sleep data']
+];
+function connectCards(list){
+  return list.map(([n,d])=>`
+    <div class="connect-card">
+      <div class="l"><b>${n}</b><span>${d}</span></div>
+      <button class="btn btn-ghost" style="padding:8px 16px;font-size:13px" onclick="
+        const c=this.closest('.connect-card');const on=c.classList.toggle('on');
+        this.textContent=on?'Disconnect':'Connect';
+        c.querySelector('.status')?.remove();
+        if(on){const s=document.createElement('span');s.className='status';s.textContent='Connected (demo)';c.querySelector('.l').appendChild(s);}
+      ">Connect</button>
+    </div>`).join('');
+}
+document.getElementById('agents').innerHTML = connectCards(agents);
+document.getElementById('data').innerHTML = connectCards(sources);
+</script>
+</body>
+</html>

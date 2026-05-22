@@ -1,0 +1,320 @@
+{
+ "anchors": [
+  {
+   "id": "kasey-li",
+   "title": "Because you're considering Kasey Li (MMA)",
+   "components": [
+    {
+     "name": "Kasey Li, MD DDS",
+     "role": "Jaw Surgeon \u2014 MMA",
+     "org": "Sleep Apnea Surgery Center",
+     "city": "Palo Alto, CA",
+     "price": 42000,
+     "note": "Anchor: maxillomandibular advancement for OSA.",
+     "tags": [
+      "MMA",
+      "OSA"
+     ]
+    },
+    {
+     "name": "Audrey Yoon, DDS",
+     "role": "Orthodontist team \u2014 pre/post-surgical",
+     "org": "Smile Design & Beyond",
+     "city": "Los Angeles, CA",
+     "price": 9000,
+     "note": "DOME + surgical orthodontics to pair with MMA.",
+     "tags": [
+      "DOME",
+      "Surgical ortho"
+     ]
+    },
+    {
+     "name": "Airway Recovery Collective",
+     "role": "Recovery team \u2014 myofunctional + PT",
+     "org": "Demo network",
+     "city": "Telehealth + CA",
+     "price": 2800,
+     "note": "Myofunctional therapy, lymphatic/PT, nutrition through healing.",
+     "tags": [
+      "Myo",
+      "PT",
+      "Nursing"
+     ]
+    },
+    {
+     "name": "Post-Op Recovery Protocol",
+     "role": "Peptide protocol (demo)",
+     "org": "zzzwell demo",
+     "city": "\u2014",
+     "price": 650,
+     "note": "Demo bundle \u2014 discuss any peptide use with your surgeon; many are research-use-only.",
+     "tags": [
+      "Demo",
+      "Discuss w/ MD"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "coppelson",
+   "title": "Because you're considering Kevin Coppelson (MSE + MMA)",
+   "components": [
+    {
+     "name": "Kevin Coppelson, DDS MD",
+     "role": "Jaw Surgeon \u2014 MSE/MMA",
+     "org": "Breathe Institute / Ventura O&FS",
+     "city": "Los Angeles, CA",
+     "price": 39000,
+     "note": "Anchor: skeletal expansion + advancement.",
+     "tags": [
+      "MSE",
+      "MMA"
+     ]
+    },
+    {
+     "name": "Zubad Newaz, DDS",
+     "role": "Orthodontist team \u2014 MSE/FME",
+     "org": "TMJ\u00b7Sleep\u00b7Airway Orthodontics",
+     "city": "New York, NY",
+     "price": 8500,
+     "note": "MSE/FME expansion to pair with surgery.",
+     "tags": [
+      "MSE",
+      "FME"
+     ]
+    },
+    {
+     "name": "Breathe Recovery Team",
+     "role": "Recovery team",
+     "org": "Demo network",
+     "city": "LA + Telehealth",
+     "price": 3000,
+     "note": "Concierge recovery, myofunctional therapy, follow-up imaging.",
+     "tags": [
+      "Myo",
+      "Concierge"
+     ]
+    },
+    {
+     "name": "Expansion Recovery Protocol",
+     "role": "Peptide protocol (demo)",
+     "org": "zzzwell demo",
+     "city": "\u2014",
+     "price": 600,
+     "note": "Demo only \u2014 no efficacy claims; clinician-directed.",
+     "tags": [
+      "Demo",
+      "Discuss w/ MD"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "movahed",
+   "title": "Because you're considering Reza Movahed (insurance-friendly)",
+   "components": [
+    {
+     "name": "Reza Movahed, DMD FACS",
+     "role": "Jaw Surgeon \u2014 MMA/TMJ",
+     "org": "Movahed OMS",
+     "city": "Chesterfield, MO",
+     "price": 0,
+     "note": "Anchor: often insurance-covered when OSA is documented.",
+     "tags": [
+      "MMA",
+      "TMJ",
+      "Insurance"
+     ]
+    },
+    {
+     "name": "Local MSE Orthodontist",
+     "role": "Orthodontist team",
+     "org": "Demo partner",
+     "city": "St. Louis, MO",
+     "price": 7500,
+     "note": "Pre/post-surgical orthodontics + expansion.",
+     "tags": [
+      "MSE",
+      "Surgical ortho"
+     ]
+    },
+    {
+     "name": "Midwest Recovery Team",
+     "role": "Recovery team",
+     "org": "Demo network",
+     "city": "St. Louis + Telehealth",
+     "price": 2400,
+     "note": "PT, myofunctional therapy, nutrition.",
+     "tags": [
+      "PT",
+      "Myo"
+     ]
+    },
+    {
+     "name": "Standard Recovery Protocol",
+     "role": "Peptide protocol (demo)",
+     "org": "zzzwell demo",
+     "city": "\u2014",
+     "price": 550,
+     "note": "Demo only \u2014 clinician-directed; verify coverage.",
+     "tags": [
+      "Demo",
+      "Discuss w/ MD"
+     ]
+    }
+   ]
+  }
+ ],
+ "carousels": [
+  {
+   "title": "Top-rated recovery teams",
+   "items": [
+    {
+     "name": "Airway Recovery Collective",
+     "role": "Recovery",
+     "org": "Demo",
+     "city": "CA + Telehealth",
+     "price": 2800,
+     "note": "Myo + PT + nutrition.",
+     "tags": [
+      "Myo",
+      "PT"
+     ]
+    },
+    {
+     "name": "Breathe Recovery Team",
+     "role": "Recovery",
+     "org": "Demo",
+     "city": "LA",
+     "price": 3000,
+     "note": "Concierge recovery.",
+     "tags": [
+      "Concierge"
+     ]
+    },
+    {
+     "name": "Midwest Recovery Team",
+     "role": "Recovery",
+     "org": "Demo",
+     "city": "St. Louis",
+     "price": 2400,
+     "note": "PT + myo.",
+     "tags": [
+      "PT"
+     ]
+    },
+    {
+     "name": "NE Sleep Recovery",
+     "role": "Recovery",
+     "org": "Demo",
+     "city": "NYC",
+     "price": 3200,
+     "note": "Post-op airway rehab.",
+     "tags": [
+      "Airway rehab"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Airway orthodontist teams to pair",
+   "items": [
+    {
+     "name": "Audrey Yoon, DDS",
+     "role": "Orthodontist",
+     "org": "Smile Design & Beyond",
+     "city": "LA",
+     "price": 9000,
+     "note": "DOME pioneer.",
+     "tags": [
+      "DOME"
+     ]
+    },
+    {
+     "name": "Zubad Newaz, DDS",
+     "role": "Orthodontist",
+     "org": "TMJ\u00b7Sleep\u00b7Airway",
+     "city": "NYC",
+     "price": 8500,
+     "note": "MSE/FME.",
+     "tags": [
+      "MSE",
+      "FME"
+     ]
+    },
+    {
+     "name": "Elara Orthodontics",
+     "role": "Orthodontist",
+     "org": "Elara",
+     "city": "Richmond/Houston",
+     "price": 8800,
+     "note": "MSE/MARPE/FME.",
+     "tags": [
+      "MSE",
+      "FME"
+     ]
+    },
+    {
+     "name": "Team Dental (FME)",
+     "role": "Orthodontist",
+     "org": "Team Dental",
+     "city": "NYC/Philly",
+     "price": 9200,
+     "note": "Facegenics FME.",
+     "tags": [
+      "FME"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Recovery protocols paired with MMA (demo)",
+   "items": [
+    {
+     "name": "Post-Op Recovery Protocol",
+     "role": "Protocol (demo)",
+     "org": "zzzwell demo",
+     "city": "\u2014",
+     "price": 650,
+     "note": "Demo; clinician-directed.",
+     "tags": [
+      "Demo"
+     ]
+    },
+    {
+     "name": "Expansion Recovery Protocol",
+     "role": "Protocol (demo)",
+     "org": "zzzwell demo",
+     "city": "\u2014",
+     "price": 600,
+     "note": "Demo; no claims.",
+     "tags": [
+      "Demo"
+     ]
+    },
+    {
+     "name": "Nutrition + Supplement Plan",
+     "role": "Plan (demo)",
+     "org": "zzzwell demo",
+     "city": "\u2014",
+     "price": 300,
+     "note": "OTC supplements only.",
+     "tags": [
+      "OTC"
+     ]
+    },
+    {
+     "name": "Sleep Optimization Plan",
+     "role": "Plan (demo)",
+     "org": "zzzwell demo",
+     "city": "\u2014",
+     "price": 250,
+     "note": "Sleep hygiene + PAP follow-up.",
+     "tags": [
+      "Sleep"
+     ]
+    }
+   ]
+  }
+ ]
+}
