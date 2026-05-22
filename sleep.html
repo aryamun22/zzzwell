@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sleep Medicine Providers — ClearJaw</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html"><span class="dot"></span> ClearJaw</a>
+    <nav class="nav-links">
+      <a href="sleep.html" class="active">Sleep Medicine</a>
+      <a href="orthodontists.html">Orthodontists</a>
+      <a href="omfs.html">Jaw Surgeons</a>
+      <a href="glp1.html">GLP-1 for OSA</a>
+      <a href="pap-labs.html">PAP &amp; Sleep Labs</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="section-head">
+    <span class="eyebrow">Directory</span>
+    <h2>Sleep Medicine Providers</h2>
+    <p>Two groups: <strong>community-known</strong> sleep &amp; airway physicians frequently referenced in patient communities (r/SleepApnea, r/UARS, airway forums), and the top <strong>CMS Medicare sleep-study billers</strong> (ranked by attended-polysomnography payments, CY2023) from public Provider-and-Service data.</p>
+  </section>
+  <div class="disclaimer">
+    <strong>Note:</strong> "Community-known" reflects forum visibility, not outcomes. CMS-data listings reflect Medicare billing volume only — high volume is not a quality measure. No endorsement or pricing claim is made.
+  </div>
+  <div id="dir"></div>
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <div>© <span id="yr"></span> ClearJaw — demo directory.</div>
+    <div class="foot-links"><a href="index.html">Home</a><a href="orthodontists.html">Orthodontists</a><a href="omfs.html">Surgeons</a></div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+renderDirectory({
+  dataUrl: 'data/sleep.json',
+  mount: '#dir',
+  transform: raw => [
+    ...raw.known.map(p => ({...p, badge:'community'})),
+    ...raw.cms.map(p => ({...p, badge:'cms'}))
+  ]
+});
+</script>
+</body>
+</html>

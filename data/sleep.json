@@ -1,0 +1,957 @@
+{
+ "known": [
+  {
+   "name": "Soroush Zaghi",
+   "credentials": "MD",
+   "org": "The Breathe Institute",
+   "city": "Los Angeles",
+   "state": "CA",
+   "country": "US",
+   "tags": [
+    "Airway",
+    "Tongue-tie",
+    "OSA",
+    "ENT"
+   ],
+   "note": "Major presence in airway/myofunctional communities (r/UARS, r/jawsurgery). Harvard MD, UCLA ENT, Stanford sleep fellowship.",
+   "source": "community"
+  },
+  {
+   "name": "Eric Kezirian",
+   "credentials": "MD, MPH",
+   "org": "UCLA / Keck USC",
+   "city": "Los Angeles",
+   "state": "CA",
+   "country": "US",
+   "tags": [
+    "Sleep Surgery",
+    "OSA",
+    "DISE"
+   ],
+   "note": "Academic sleep surgeon frequently cited in OSA forums.",
+   "source": "community"
+  },
+  {
+   "name": "Barry Krakow",
+   "credentials": "MD",
+   "org": "Sleep & Human Health Institute",
+   "city": "Albuquerque",
+   "state": "NM",
+   "country": "US",
+   "tags": [
+    "Sleep Medicine",
+    "UARS",
+    "Complex insomnia"
+   ],
+   "note": "Author often referenced in UARS/sleep-breathing discussions.",
+   "source": "community"
+  },
+  {
+   "name": "Steven Park",
+   "credentials": "MD",
+   "org": "Private (ENT/Sleep)",
+   "city": "New York",
+   "state": "NY",
+   "country": "US",
+   "tags": [
+    "ENT",
+    "Sleep",
+    "UARS"
+   ],
+   "note": "Author/podcaster popular in sleep-breathing communities.",
+   "source": "community"
+  }
+ ],
+ "cms": [
+  {
+   "name": "Mehrdad Razavi",
+   "credentials": "",
+   "org": "",
+   "city": "Redding",
+   "state": "CA",
+   "country": "US",
+   "tags": [
+    "Home sleep test (Type III)",
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended",
+    "RPM device"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 2,249 beneficiaries, $1,062,420 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Tate Grimes",
+   "credentials": "",
+   "org": "",
+   "city": "Dallas",
+   "state": "TX",
+   "country": "US",
+   "tags": [
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 669 beneficiaries, $532,033 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Syed Sayeeduddin",
+   "credentials": "",
+   "org": "",
+   "city": "Brookfield",
+   "state": "IL",
+   "country": "US",
+   "tags": [
+    "Home sleep test",
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 273 beneficiaries, $275,704 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "William Noah",
+   "credentials": "",
+   "org": "",
+   "city": "Murfreesboro",
+   "state": "TN",
+   "country": "US",
+   "tags": [
+    "Home sleep test",
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 337 beneficiaries, $273,277 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Kunal Agarwal",
+   "credentials": "",
+   "org": "",
+   "city": "Sarasota",
+   "state": "FL",
+   "country": "US",
+   "tags": [
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended",
+    "RPM device",
+    "RPM mgmt"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 500 beneficiaries, $207,432 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Charu Sabharwal",
+   "credentials": "",
+   "org": "",
+   "city": "Leesburg",
+   "state": "VA",
+   "country": "US",
+   "tags": [
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 183 beneficiaries, $179,940 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Melisa Coaker",
+   "credentials": "",
+   "org": "",
+   "city": "Clive",
+   "state": "IA",
+   "country": "US",
+   "tags": [
+    "Home sleep test (Type III)",
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 359 beneficiaries, $173,531 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Ross Liebman",
+   "credentials": "",
+   "org": "",
+   "city": "Sunnyvale",
+   "state": "CA",
+   "country": "US",
+   "tags": [
+    "Home sleep test",
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 129 beneficiaries, $152,788 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Douglas Puryear",
+   "credentials": "",
+   "org": "",
+   "city": "Midlothian",
+   "state": "VA",
+   "country": "US",
+   "tags": [
+    "99439",
+    "99458",
+    "99490",
+    "Home sleep test"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 164 beneficiaries, $144,812 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Rami Khayat",
+   "credentials": "",
+   "org": "",
+   "city": "Newport Beach",
+   "state": "CA",
+   "country": "US",
+   "tags": [
+    "Home sleep test",
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 122 beneficiaries, $144,325 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Abhijit Deshpande",
+   "credentials": "",
+   "org": "",
+   "city": "Santa Rosa",
+   "state": "CA",
+   "country": "US",
+   "tags": [
+    "Home sleep test",
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 195 beneficiaries, $142,631 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Aynur Okcay",
+   "credentials": "",
+   "org": "",
+   "city": "Tucson",
+   "state": "AZ",
+   "country": "US",
+   "tags": [
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 173 beneficiaries, $136,240 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Michael Polsky",
+   "credentials": "",
+   "org": "",
+   "city": "North Chesterfield",
+   "state": "VA",
+   "country": "US",
+   "tags": [
+    "99439",
+    "99458",
+    "99490",
+    "Home sleep test"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 218 beneficiaries, $135,493 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Joseph Cheung",
+   "credentials": "",
+   "org": "",
+   "city": "Jacksonville",
+   "state": "FL",
+   "country": "US",
+   "tags": [
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 165 beneficiaries, $135,203 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Daniel Smith",
+   "credentials": "",
+   "org": "",
+   "city": "Richmond",
+   "state": "VA",
+   "country": "US",
+   "tags": [
+    "99458",
+    "99490",
+    "Home sleep test",
+    "PSG + CPAP/BiPAP titration"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 156 beneficiaries, $132,499 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Ronald Kass",
+   "credentials": "",
+   "org": "",
+   "city": "Stockton",
+   "state": "CA",
+   "country": "US",
+   "tags": [
+    "Home sleep test (Type III)",
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 147 beneficiaries, $128,298 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Stephen Chung",
+   "credentials": "",
+   "org": "",
+   "city": "Walla Walla",
+   "state": "WA",
+   "country": "US",
+   "tags": [
+    "Home sleep test",
+    "Home sleep test (Type III)",
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 146 beneficiaries, $127,564 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Chirag Pandya",
+   "credentials": "",
+   "org": "",
+   "city": "Pleasanton",
+   "state": "CA",
+   "country": "US",
+   "tags": [
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 115 beneficiaries, $125,901 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Manpreet Sanghari",
+   "credentials": "",
+   "org": "",
+   "city": "Sunnyvale",
+   "state": "CA",
+   "country": "US",
+   "tags": [
+    "Home sleep test",
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 98 beneficiaries, $124,180 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Brandon Flores",
+   "credentials": "",
+   "org": "",
+   "city": "Reno",
+   "state": "NV",
+   "country": "US",
+   "tags": [
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 162 beneficiaries, $120,593 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Daniel Norman",
+   "credentials": "",
+   "org": "",
+   "city": "Los Angeles",
+   "state": "CA",
+   "country": "US",
+   "tags": [
+    "Home sleep test",
+    "Home sleep test (Type III)",
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 241 beneficiaries, $118,037 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Ruchir Patel",
+   "credentials": "",
+   "org": "",
+   "city": "Scottsdale",
+   "state": "AZ",
+   "country": "US",
+   "tags": [
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended",
+    "RPM device",
+    "RPM mgmt"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 296 beneficiaries, $117,302 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Michael Cohen",
+   "credentials": "",
+   "org": "",
+   "city": "Walnut Creek",
+   "state": "CA",
+   "country": "US",
+   "tags": [
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 117 beneficiaries, $112,101 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Cheta Nand",
+   "credentials": "",
+   "org": "",
+   "city": "Richland",
+   "state": "WA",
+   "country": "US",
+   "tags": [
+    "Home sleep test",
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 144 beneficiaries, $111,568 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Tajender Vasu",
+   "credentials": "",
+   "org": "",
+   "city": "Falls Church",
+   "state": "VA",
+   "country": "US",
+   "tags": [
+    "Home sleep test (Type III)",
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 130 beneficiaries, $109,359 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Raghavendra Ghuge",
+   "credentials": "",
+   "org": "",
+   "city": "Tyler",
+   "state": "TX",
+   "country": "US",
+   "tags": [
+    "Home sleep test",
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 186 beneficiaries, $102,384 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Umar Nasir",
+   "credentials": "",
+   "org": "",
+   "city": "Reno",
+   "state": "NV",
+   "country": "US",
+   "tags": [
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 107 beneficiaries, $100,712 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Michel Alkhalil",
+   "credentials": "",
+   "org": "",
+   "city": "Troy",
+   "state": "MI",
+   "country": "US",
+   "tags": [
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 112 beneficiaries, $98,352 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Madhuri Uppalapati",
+   "credentials": "",
+   "org": "",
+   "city": "Glenview",
+   "state": "IL",
+   "country": "US",
+   "tags": [
+    "Home sleep test",
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 109 beneficiaries, $94,800 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "R Sangal",
+   "credentials": "",
+   "org": "",
+   "city": "Sterling Heights",
+   "state": "MI",
+   "country": "US",
+   "tags": [
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 111 beneficiaries, $94,758 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Vu Tran",
+   "credentials": "",
+   "org": "",
+   "city": "Santa Rosa",
+   "state": "CA",
+   "country": "US",
+   "tags": [
+    "99458",
+    "Home sleep test",
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 79 beneficiaries, $93,628 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Saqib Ansari",
+   "credentials": "",
+   "org": "",
+   "city": "Capitola",
+   "state": "CA",
+   "country": "US",
+   "tags": [
+    "Home sleep test",
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 131 beneficiaries, $89,157 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Bharat Jain",
+   "credentials": "",
+   "org": "",
+   "city": "Greensburg",
+   "state": "PA",
+   "country": "US",
+   "tags": [
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 122 beneficiaries, $89,034 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "James Curlee",
+   "credentials": "",
+   "org": "",
+   "city": "Georgetown",
+   "state": "TX",
+   "country": "US",
+   "tags": [
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 111 beneficiaries, $88,557 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "William Hart",
+   "credentials": "",
+   "org": "",
+   "city": "Capitola",
+   "state": "CA",
+   "country": "US",
+   "tags": [
+    "Home sleep test",
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 76 beneficiaries, $86,260 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Nisha Patel",
+   "credentials": "",
+   "org": "",
+   "city": "Libertyville",
+   "state": "IL",
+   "country": "US",
+   "tags": [
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 106 beneficiaries, $85,927 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Ronald Popper",
+   "credentials": "",
+   "org": "",
+   "city": "Thousand Oaks",
+   "state": "CA",
+   "country": "US",
+   "tags": [
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 68 beneficiaries, $83,757 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Michelle Primeau",
+   "credentials": "",
+   "org": "",
+   "city": "Sunnyvale",
+   "state": "CA",
+   "country": "US",
+   "tags": [
+    "Home sleep test",
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 82 beneficiaries, $79,361 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "John Poceta",
+   "credentials": "",
+   "org": "",
+   "city": "La Jolla",
+   "state": "CA",
+   "country": "US",
+   "tags": [
+    "Home sleep test (Type III)",
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 172 beneficiaries, $74,769 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Amit Patel",
+   "credentials": "",
+   "org": "",
+   "city": "Falls Church",
+   "state": "VA",
+   "country": "US",
+   "tags": [
+    "Home sleep test (Type III)",
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 89 beneficiaries, $74,403 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Robert Mazzola",
+   "credentials": "",
+   "org": "",
+   "city": "Salt Lake City",
+   "state": "UT",
+   "country": "US",
+   "tags": [
+    "Home sleep test",
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 104 beneficiaries, $72,410 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Jessica Riggs",
+   "credentials": "",
+   "org": "",
+   "city": "Leesburg",
+   "state": "VA",
+   "country": "US",
+   "tags": [
+    "Home sleep test (Type III)",
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 93 beneficiaries, $71,924 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Eduardo Onate",
+   "credentials": "",
+   "org": "",
+   "city": "El Paso",
+   "state": "TX",
+   "country": "US",
+   "tags": [
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 126 beneficiaries, $71,585 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Hugh Wong",
+   "credentials": "",
+   "org": "",
+   "city": "Wichita",
+   "state": "KS",
+   "country": "US",
+   "tags": [
+    "Home sleep test",
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 97 beneficiaries, $69,086 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Caroline Tse",
+   "credentials": "",
+   "org": "",
+   "city": "Portland",
+   "state": "OR",
+   "country": "US",
+   "tags": [
+    "Home sleep test (Type III)",
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 80 beneficiaries, $68,400 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Talha Memon",
+   "credentials": "",
+   "org": "",
+   "city": "Murrieta",
+   "state": "CA",
+   "country": "US",
+   "tags": [
+    "Home sleep test (Type III)",
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 82 beneficiaries, $67,859 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Michael Zachek",
+   "credentials": "",
+   "org": "",
+   "city": "Bowling Green",
+   "state": "KY",
+   "country": "US",
+   "tags": [
+    "Home sleep test (Type III)",
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 103 beneficiaries, $67,659 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Vadim Kagramanov",
+   "credentials": "",
+   "org": "",
+   "city": "Sunnyvale",
+   "state": "CA",
+   "country": "US",
+   "tags": [
+    "Home sleep test",
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 78 beneficiaries, $66,017 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Francisco Ralls",
+   "credentials": "",
+   "org": "",
+   "city": "Gilbert",
+   "state": "AZ",
+   "country": "US",
+   "tags": [
+    "Home sleep test (Type III)",
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended",
+    "RPM device"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 71 beneficiaries, $64,326 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Brendon Colaco",
+   "credentials": "",
+   "org": "",
+   "city": "Jacksonville",
+   "state": "FL",
+   "country": "US",
+   "tags": [
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 81 beneficiaries, $63,624 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Rakesh Gupta",
+   "credentials": "",
+   "org": "",
+   "city": "Somerset",
+   "state": "MA",
+   "country": "US",
+   "tags": [
+    "Home sleep test",
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 83 beneficiaries, $62,318 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Scott Baldridge",
+   "credentials": "",
+   "org": "",
+   "city": "Mountain Home",
+   "state": "ID",
+   "country": "US",
+   "tags": [
+    "Home sleep test (Type III)",
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 66 beneficiaries, $61,802 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Sudha Karupaiah",
+   "credentials": "",
+   "org": "",
+   "city": "San Jose",
+   "state": "CA",
+   "country": "US",
+   "tags": [
+    "Home sleep test",
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 55 beneficiaries, $61,399 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "",
+   "credentials": "",
+   "org": "Alabama Sleep Therapy, Llc",
+   "city": "Birmingham",
+   "state": "AL",
+   "country": "US",
+   "tags": [
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 91 beneficiaries, $60,434 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Elliott Exar",
+   "credentials": "",
+   "org": "",
+   "city": "Laurel",
+   "state": "MD",
+   "country": "US",
+   "tags": [
+    "Home sleep test",
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 72 beneficiaries, $59,545 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Sarah Patel",
+   "credentials": "",
+   "org": "",
+   "city": "Glendale",
+   "state": "AZ",
+   "country": "US",
+   "tags": [
+    "Home sleep test (Type III)",
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 64 beneficiaries, $59,480 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "John Andrews",
+   "credentials": "",
+   "org": "",
+   "city": "Reno",
+   "state": "NV",
+   "country": "US",
+   "tags": [
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 79 beneficiaries, $59,447 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Nancy Behrens",
+   "credentials": "",
+   "org": "",
+   "city": "Charlotte",
+   "state": "NC",
+   "country": "US",
+   "tags": [
+    "Home sleep test",
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 110 beneficiaries, $59,311 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Raman Malhotra",
+   "credentials": "",
+   "org": "",
+   "city": "Saint Louis",
+   "state": "MO",
+   "country": "US",
+   "tags": [
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 74 beneficiaries, $57,977 PSG payments (CY2023).",
+   "source": "cms"
+  },
+  {
+   "name": "Mubasher Fazal",
+   "credentials": "",
+   "org": "",
+   "city": "Erie",
+   "state": "PA",
+   "country": "US",
+   "tags": [
+    "PSG + CPAP/BiPAP titration",
+    "PSG attended"
+   ],
+   "note": "CMS Medicare sleep-study biller \u2014 58 beneficiaries, $56,978 PSG payments (CY2023).",
+   "source": "cms"
+  }
+ ]
+}

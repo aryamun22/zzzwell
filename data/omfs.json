@@ -1,0 +1,127 @@
+[
+ {
+  "name": "Kasey Li",
+  "credentials": "MD, DDS",
+  "org": "Sleep Apnea Surgery Center",
+  "city": "Palo Alto",
+  "state": "CA",
+  "country": "US",
+  "tags": [
+   "MMA",
+   "OSA",
+   "Cash/OON"
+  ],
+  "payment": "Cash / Out-of-network",
+  "note": "Most-cited dedicated OSA-MMA surgeon (1,000+ MMA cases). Triple board-certified; co-founded Stanford program.",
+  "source": "community"
+ },
+ {
+  "name": "Stanley Liu",
+  "credentials": "MD, DDS, FACS",
+  "org": "Nova Southeastern (ex-Stanford)",
+  "city": "Fort Lauderdale",
+  "state": "FL",
+  "country": "US",
+  "tags": [
+   "MMA",
+   "DOME",
+   "Sleep Surgery"
+  ],
+  "payment": "Insurance varies (academic)",
+  "note": "Full-scope sleep surgery; trained under Riley at Stanford.",
+  "source": "community"
+ },
+ {
+  "name": "Larry Wolford",
+  "credentials": "DMD",
+  "org": "Baylor / Texas A&M",
+  "city": "Dallas",
+  "state": "TX",
+  "country": "US",
+  "tags": [
+   "MMA",
+   "TMJ",
+   "OSA"
+  ],
+  "payment": "Insurance-accepting",
+  "note": "40+ year academic leader in TMJ and MMA for OSA.",
+  "source": "community"
+ },
+ {
+  "name": "Reza Movahed",
+  "credentials": "DMD, FACS",
+  "org": "Movahed OMS",
+  "city": "Chesterfield",
+  "state": "MO",
+  "country": "US",
+  "tags": [
+   "MMA",
+   "TMJ",
+   "MSE/MARPE-collab"
+  ],
+  "payment": "Accepts insurance",
+  "note": "Accepts Humana, Medicare, BCBS, Kaiser, Cigna, Aetna. Works alongside skeletal expansion.",
+  "source": "community"
+ },
+ {
+  "name": "Jeffrey Posnick",
+  "credentials": "DMD, MD",
+  "org": "Posnick Center",
+  "city": "Chevy Chase",
+  "state": "MD",
+  "country": "US",
+  "tags": [
+   "Orthognathic",
+   "Craniofacial"
+  ],
+  "payment": "Verify (often limited insurance)",
+  "note": "Orthognathic textbook author; Georgetown/Hopkins/UMD appointments.",
+  "source": "community"
+ },
+ {
+  "name": "Arnett & Gunson",
+  "credentials": "DDS / DDS",
+  "org": "Arnett Gunson Facial Surgery",
+  "city": "Santa Barbara",
+  "state": "CA",
+  "country": "US",
+  "tags": [
+   "Orthognathic",
+   "Facial balance"
+  ],
+  "payment": "Largely cash/OON (verify)",
+  "note": "Cult following on r/jawsurgery for aesthetic + functional outcomes.",
+  "source": "community"
+ },
+ {
+  "name": "Multidisciplinary MMA Program (Hutz & Roy)",
+  "credentials": "MD/DDS",
+  "org": "Rush University Medical Center",
+  "city": "Chicago",
+  "state": "IL",
+  "country": "US",
+  "tags": [
+   "MMA",
+   "OSA",
+   "Multidisciplinary"
+  ],
+  "payment": "Insurance (academic)",
+  "note": "One of the only multidisciplinary MMA programs in the US.",
+  "source": "community"
+ },
+ {
+  "name": "Penn Sleep / MMA Program",
+  "credentials": "",
+  "org": "Penn Medicine",
+  "city": "Philadelphia",
+  "state": "PA",
+  "country": "US",
+  "tags": [
+   "MMA",
+   "OSA"
+  ],
+  "payment": "Insurance (academic)",
+  "note": "NIH-designated sleep center; submental-intubation MMA technique.",
+  "source": "community"
+ }
+]

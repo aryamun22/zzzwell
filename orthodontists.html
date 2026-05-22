@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Airway Orthodontists — ClearJaw</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html"><span class="dot"></span> ClearJaw</a>
+    <nav class="nav-links">
+      <a href="sleep.html">Sleep Medicine</a>
+      <a href="orthodontists.html" class="active">Orthodontists</a>
+      <a href="omfs.html">Jaw Surgeons</a>
+      <a href="glp1.html">GLP-1 for OSA</a>
+      <a href="pap-labs.html">PAP &amp; Sleep Labs</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="section-head">
+    <span class="eyebrow">Directory</span>
+    <h2>Airway Orthodontists</h2>
+    <p>Expansion-focused orthodontists for sleep-disordered breathing — palate expansion (RPE), miniscrew-assisted expansion (MARPE / MSE), and DOME. Seeded from the <strong>getExpanded.org</strong> airway-provider directory plus widely-referenced airway orthodontists.</p>
+  </section>
+  <div class="disclaimer">
+    <strong>Note:</strong> Airway orthodontics is typically billed as dental/orthodontic care and is <strong>usually cash-pay</strong>, even when a related surgery is covered. Verify scope, technique, and pricing directly.
+  </div>
+  <div id="dir"></div>
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <div>© <span id="yr"></span> ClearJaw — demo directory.</div>
+    <div class="foot-links"><a href="index.html">Home</a><a href="sleep.html">Sleep</a><a href="omfs.html">Surgeons</a></div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+renderDirectory({ dataUrl: 'data/orthodontists.json', mount: '#dir' });
+</script>
+</body>
+</html>

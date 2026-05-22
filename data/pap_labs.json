@@ -1,0 +1,146 @@
+[
+ {
+  "name": "Aeroflow Sleep",
+  "credentials": "DME / PAP supplier",
+  "org": "Aeroflow",
+  "city": "Asheville",
+  "state": "NC",
+  "country": "US",
+  "zip": "28806",
+  "tags": [
+   "CPAP",
+   "BiPAP",
+   "Supplies",
+   "Insurance billing"
+  ],
+  "payment": "Insurance / cash",
+  "note": "National CPAP/BiPAP DME supplier; insurance-qualification workflow.",
+  "source": "community",
+  "kind": "PAP"
+ },
+ {
+  "name": "CPAP.com",
+  "credentials": "PAP retailer",
+  "org": "CPAP.com",
+  "city": "Houston",
+  "state": "TX",
+  "country": "US",
+  "zip": "77063",
+  "tags": [
+   "CPAP",
+   "BiPAP",
+   "Cash retail"
+  ],
+  "payment": "Cash retail",
+  "note": "Direct-to-consumer PAP equipment (Rx required for devices).",
+  "source": "community",
+  "kind": "PAP"
+ },
+ {
+  "name": "Lofta",
+  "credentials": "PAP + home testing",
+  "org": "Lofta",
+  "city": "San Diego",
+  "state": "CA",
+  "country": "US",
+  "zip": "92101",
+  "tags": [
+   "Home sleep test",
+   "CPAP",
+   "Telehealth Rx"
+  ],
+  "payment": "Cash",
+  "note": "Cash home sleep test + telehealth Rx + PAP bundle.",
+  "source": "community",
+  "kind": "PAP"
+ },
+ {
+  "name": "Stanford Sleep Medicine Center",
+  "credentials": "AASM-accredited lab",
+  "org": "Stanford Health Care",
+  "city": "Redwood City",
+  "state": "CA",
+  "country": "US",
+  "zip": "94063",
+  "tags": [
+   "PSG",
+   "In-lab",
+   "Academic"
+  ],
+  "payment": "Insurance",
+  "note": "Academic sleep disorders center (in-lab polysomnography).",
+  "source": "community",
+  "kind": "LAB"
+ },
+ {
+  "name": "Cleveland Clinic Sleep Disorders Center",
+  "credentials": "AASM-accredited lab",
+  "org": "Cleveland Clinic",
+  "city": "Cleveland",
+  "state": "OH",
+  "country": "US",
+  "zip": "44195",
+  "tags": [
+   "PSG",
+   "In-lab",
+   "Academic"
+  ],
+  "payment": "Insurance",
+  "note": "Comprehensive in-lab and home sleep testing.",
+  "source": "community",
+  "kind": "LAB"
+ },
+ {
+  "name": "Johns Hopkins Sleep Disorders Center",
+  "credentials": "AASM-accredited lab",
+  "org": "Johns Hopkins",
+  "city": "Baltimore",
+  "state": "MD",
+  "country": "US",
+  "zip": "21224",
+  "tags": [
+   "PSG",
+   "In-lab",
+   "Academic"
+  ],
+  "payment": "Insurance",
+  "note": "Academic sleep center; full diagnostic workup.",
+  "source": "community",
+  "kind": "LAB"
+ },
+ {
+  "name": "NYU Langone Sleep Disorders Center",
+  "credentials": "AASM-accredited lab",
+  "org": "NYU Langone",
+  "city": "New York",
+  "state": "NY",
+  "country": "US",
+  "zip": "10016",
+  "tags": [
+   "PSG",
+   "In-lab"
+  ],
+  "payment": "Insurance",
+  "note": "In-lab PSG and home sleep apnea testing.",
+  "source": "community",
+  "kind": "LAB"
+ },
+ {
+  "name": "UCLA Sleep Disorders Center",
+  "credentials": "AASM-accredited lab",
+  "org": "UCLA Health",
+  "city": "Los Angeles",
+  "state": "CA",
+  "country": "US",
+  "zip": "90095",
+  "tags": [
+   "PSG",
+   "In-lab",
+   "DISE"
+  ],
+  "payment": "Insurance",
+  "note": "Diagnostic + surgical evaluation pathway.",
+  "source": "community",
+  "kind": "LAB"
+ }
+]

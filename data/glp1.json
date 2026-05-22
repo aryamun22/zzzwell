@@ -1,0 +1,137 @@
+[
+ {
+  "name": "LillyDirect / Zepbound Self-Pay",
+  "credentials": "Telehealth",
+  "org": "Eli Lilly",
+  "city": "Nationwide",
+  "state": "US",
+  "country": "US",
+  "zip": "",
+  "tags": [
+   "Tirzepatide",
+   "Self-pay vials",
+   "Telehealth"
+  ],
+  "payment": "Cash self-pay (single-dose vials)",
+  "note": "Manufacturer self-pay channel for Zepbound (tirzepatide) \u2014 the only GLP-1 with an FDA OSA indication (Dec 2024, adults with obesity, BMI\u226530).",
+  "source": "community"
+ },
+ {
+  "name": "Ro",
+  "credentials": "Telehealth platform",
+  "org": "Ro Body Program",
+  "city": "Nationwide",
+  "state": "US",
+  "country": "US",
+  "zip": "",
+  "tags": [
+   "GLP-1",
+   "Obesity med",
+   "Telehealth"
+  ],
+  "payment": "Cash / membership",
+  "note": "Telehealth obesity-medicine prescribing; OSA-with-obesity may qualify. Verify current OSA workflow.",
+  "source": "community"
+ },
+ {
+  "name": "Found",
+  "credentials": "Telehealth platform",
+  "org": "Found Health",
+  "city": "Nationwide",
+  "state": "US",
+  "country": "US",
+  "zip": "",
+  "tags": [
+   "GLP-1",
+   "Obesity med",
+   "Telehealth"
+  ],
+  "payment": "Cash / membership",
+  "note": "Obesity-medicine telehealth; clinician-supervised GLP-1 programs.",
+  "source": "community"
+ },
+ {
+  "name": "Sequence (WeightWatchers Clinic)",
+  "credentials": "Telehealth platform",
+  "org": "WW Clinic",
+  "city": "Nationwide",
+  "state": "US",
+  "country": "US",
+  "zip": "",
+  "tags": [
+   "GLP-1",
+   "Obesity med",
+   "Telehealth"
+  ],
+  "payment": "Cash / membership",
+  "note": "Clinician network prescribing GLP-1s for weight/metabolic indications.",
+  "source": "community"
+ },
+ {
+  "name": "Calibrate",
+  "credentials": "Telehealth platform",
+  "org": "Calibrate",
+  "city": "Nationwide",
+  "state": "US",
+  "country": "US",
+  "zip": "",
+  "tags": [
+   "GLP-1",
+   "Metabolic",
+   "Telehealth"
+  ],
+  "payment": "Cash / membership",
+  "note": "Year-long metabolic program with GLP-1 prescribing.",
+  "source": "community"
+ },
+ {
+  "name": "PlushCare",
+  "credentials": "Telehealth platform",
+  "org": "PlushCare",
+  "city": "Nationwide",
+  "state": "US",
+  "country": "US",
+  "zip": "",
+  "tags": [
+   "GLP-1",
+   "Primary care",
+   "Telehealth"
+  ],
+  "payment": "Cash / insurance",
+  "note": "Board-certified PCPs; weight-management GLP-1 visits.",
+  "source": "community"
+ },
+ {
+  "name": "Obesity Medicine specialists (ABOM-certified)",
+  "credentials": "MD/DO",
+  "org": "Find via Obesity Medicine Assn directory",
+  "city": "Nationwide",
+  "state": "US",
+  "country": "US",
+  "zip": "",
+  "tags": [
+   "Obesity med",
+   "GLP-1",
+   "In-person"
+  ],
+  "payment": "Cash / insurance",
+  "note": "Diplomates of the American Board of Obesity Medicine \u2014 the in-person specialty most aligned with GLP-1-for-OSA.",
+  "source": "community"
+ },
+ {
+  "name": "Primary care / family medicine",
+  "credentials": "MD/DO",
+  "org": "Any licensed PCP",
+  "city": "Nationwide",
+  "state": "US",
+  "country": "US",
+  "zip": "",
+  "tags": [
+   "Primary care",
+   "GLP-1"
+  ],
+  "payment": "Insurance / cash",
+  "note": "Reality of prescribing patterns: primary care writes ~84% of new tirzepatide scripts; family medicine ~31% among OSA patients. Sleep medicine writes ~0.2%.",
+  "source": "community"
+ }
+]

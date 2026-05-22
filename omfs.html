@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oral &amp; Maxillofacial Surgeons — ClearJaw</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html"><span class="dot"></span> ClearJaw</a>
+    <nav class="nav-links">
+      <a href="sleep.html">Sleep Medicine</a>
+      <a href="orthodontists.html">Orthodontists</a>
+      <a href="omfs.html" class="active">Jaw Surgeons</a>
+      <a href="glp1.html">GLP-1 for OSA</a>
+      <a href="pap-labs.html">PAP &amp; Sleep Labs</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="section-head">
+    <span class="eyebrow">Directory</span>
+    <h2>Oral &amp; Maxillofacial Surgeons</h2>
+    <p>Top jaw surgeons for <strong>maxillomandibular advancement (MMA)</strong> and orthognathic correction of obstructive sleep apnea — including the cash-pay "destination" names from r/jawsurgery and insurance-accepting academic programs.</p>
+  </section>
+  <div class="disclaimer">
+    <strong>Note:</strong> Payment labels are illustrative and change often — out-of-network status, cash pricing, and which plans are accepted must be confirmed with each office. When OSA is documented (sleep study + CPAP failure), MMA is frequently covered as medically necessary.
+  </div>
+  <div id="dir"></div>
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <div>© <span id="yr"></span> ClearJaw — demo directory.</div>
+    <div class="foot-links"><a href="index.html">Home</a><a href="sleep.html">Sleep</a><a href="orthodontists.html">Orthodontists</a></div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+renderDirectory({ dataUrl: 'data/omfs.json', mount: '#dir' });
+</script>
+</body>
+</html>
