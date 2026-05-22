@@ -1,8 +1,8 @@
-# ClearJaw — Cash-Pay Sleep & Jaw Specialist Directory (demo)
+# zzzwell — Cash-Pay Sleep & Jaw Specialist Directory (demo)
 
 A static, transparency-focused directory of providers who treat sleep-disordered breathing, styled after cost-plus healthcare sites.
 
-**Live:** https://clearjaw-demo.surge.sh
+**Live:** https://zzzwell.surge.sh
 
 ## Pages
 - `index.html` — landing
@@ -22,7 +22,7 @@ python3 -m http.server 8011   # then open http://localhost:8011
 
 ## Deploy
 ```bash
-npx surge ./ clearjaw-demo.surge.sh
+npx surge ./ zzzwell.surge.sh
 ```
 
 ## Disclaimer
