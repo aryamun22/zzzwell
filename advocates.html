@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patient Advocates &amp; Community — zzzwell</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html"><span class="dot"></span> zzzwell</a>
+    <nav class="nav-links">
+      <a href="sleep.html">Sleep Medicine</a>
+      <a href="orthodontists.html">Orthodontists</a>
+      <a href="omfs.html">Jaw Surgeons</a>
+      <a href="glp1.html">GLP-1 for OSA</a>
+      <a href="pap-labs.html">PAP &amp; Sleep Labs</a>
+      <a href="advocates.html" class="active">Advocates</a>
+      <a href="hall-of-shame.html">Hall of Shame</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="section-head">
+    <span class="eyebrow">Community</span>
+    <h2>Patient Advocates &amp; Forums</h2>
+    <p>Where patients compare notes on sleep-disordered breathing, jaw surgery, and airway expansion — plus how to reach a patient advocate. These communities are independent; zzzwell is not affiliated with any of them.</p>
+  </section>
+
+  <div class="disclaimer">
+    <strong>Demo / informational only.</strong> Forum links go to independent third-party communities. Peer advice is not medical advice — verify everything with a licensed clinician.
+  </div>
+
+  <h3 style="margin:32px 0 4px">Patient forums &amp; communities</h3>
+  <div class="grid" style="padding-bottom:32px">
+    <a class="card" href="https://www.reddit.com/r/jawsurgery/" target="_blank" rel="noopener"><div class="top"><h3>r/jawsurgery</h3></div><p class="note">Largest orthognathic/jaw-surgery patient community — surgeon experiences, recovery timelines, before/afters.</p></a>
+    <a class="card" href="https://www.reddit.com/r/UARS/" target="_blank" rel="noopener"><div class="top"><h3>r/UARS</h3></div><p class="note">Upper-airway resistance syndrome — the surgical-cure and expansion debate lives here.</p></a>
+    <a class="card" href="https://www.reddit.com/r/SleepApnea/" target="_blank" rel="noopener"><div class="top"><h3>r/SleepApnea</h3></div><p class="note">General OSA community — CPAP, testing, treatment options.</p></a>
+    <a class="card" href="https://www.facebook.com/groups/adultexpansion/" target="_blank" rel="noopener"><div class="top"><h3>Adult Maxillary Expansion (FB)</h3></div><p class="note">FME / EASE / MARPE / MSE adult-expansion group.</p></a>
+    <a class="card" href="https://www.getexpanded.org/" target="_blank" rel="noopener"><div class="top"><h3>getExpanded</h3></div><p class="note">Airway-expansion provider directory + education community.</p></a>
+    <a class="card" href="https://aapmd.org/" target="_blank" rel="noopener"><div class="top"><h3>AAPMD</h3></div><p class="note">American Academy of Physiological Medicine &amp; Dentistry — airway-health referral network.</p></a>
+  </div>
+
+  <h3 style="margin:24px 0 4px">Contact a patient advocate</h3>
+  <p style="color:var(--ink-soft);max-width:680px">Demo form — submitting opens your email client with a pre-filled message. No data is stored or sent anywhere by this page.</p>
+  <form id="advForm" class="prop" style="max-width:620px;margin:16px 0 64px;display:grid;gap:14px">
+    <label>Your name<br><input name="name" required style="width:100%;padding:11px 14px;border:1px solid var(--line);border-radius:10px;font-size:15px;margin-top:6px"></label>
+    <label>Your email<br><input name="email" type="email" required style="width:100%;padding:11px 14px;border:1px solid var(--line);border-radius:10px;font-size:15px;margin-top:6px"></label>
+    <label>What do you need help with?<br><textarea name="msg" rows="4" required style="width:100%;padding:11px 14px;border:1px solid var(--line);border-radius:10px;font-size:15px;margin-top:6px;font-family:inherit"></textarea></label>
+    <button class="btn btn-primary" type="submit" style="justify-self:start">Send to advocate →</button>
+  </form>
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <div>© <span id="yr"></span> zzzwell — demo directory.</div>
+    <div class="foot-links"><a href="index.html">Home</a><a href="hall-of-shame.html">Hall of Shame</a></div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+document.getElementById('advForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const f=e.target;
+  const body=encodeURIComponent(`Name: ${f.name.value}\nEmail: ${f.email.value}\n\n${f.msg.value}`);
+  window.location.href=`mailto:advocate@zzzwell.example?subject=${encodeURIComponent('Patient advocate request')}&body=${body}`;
+});
+</script>
+</body>
+</html>

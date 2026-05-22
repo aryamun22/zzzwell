@@ -16,6 +16,24 @@
   "source": "community"
  },
  {
+  "name": "Kevin Coppelson",
+  "credentials": "DDS, MD",
+  "org": "The Breathe Institute / Ventura Oral & Facial Surgery",
+  "city": "Los Angeles / Westlake Village",
+  "state": "CA",
+  "country": "US",
+  "tags": [
+   "MSE",
+   "MMA",
+   "Skeletal expansion",
+   "Airway"
+  ],
+  "payment": "Cash / OON (verify)",
+  "note": "OMFS focused on skeletal expansion + augmentation for sleep-disordered breathing (MSE + MMA). USC DDS, U. Maryland MD, Houston Methodist advanced maxillofacial fellowship.",
+  "source": "community",
+  "featured": true
+ },
+ {
   "name": "Stanley Liu",
   "credentials": "MD, DDS, FACS",
   "org": "Nova Southeastern (ex-Stanford)",

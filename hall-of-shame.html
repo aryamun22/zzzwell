@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hall of Shame (Demo) — zzzwell</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html"><span class="dot"></span> zzzwell</a>
+    <nav class="nav-links">
+      <a href="sleep.html">Sleep Medicine</a>
+      <a href="orthodontists.html">Orthodontists</a>
+      <a href="omfs.html">Jaw Surgeons</a>
+      <a href="glp1.html">GLP-1 for OSA</a>
+      <a href="pap-labs.html">PAP &amp; Sleep Labs</a>
+      <a href="advocates.html">Advocates</a>
+      <a href="hall-of-shame.html" class="active">Hall of Shame</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="section-head">
+    <span class="eyebrow">Accountability</span>
+    <h2>Hall of Shame &amp; Blacklist <span style="font-size:.5em;color:var(--ink-soft);font-weight:700">(DEMO)</span></h2>
+    <p>A demonstration of how a consumer-protection "watchlist" could surface providers with verified disciplinary history — so patients can avoid bad actors before they pay cash.</p>
+  </section>
+
+  <div class="disclaimer" style="background:#fde8e6;border-color:#f4b5b0;color:#8a2018">
+    <strong>⚠️ Demo with fictional names only.</strong> Every entry below is <strong>invented for layout purposes</strong> and refers to no real person. zzzwell does <strong>not</strong> publish accusations against real, named providers. A real version of this page must be built <strong>exclusively from public, verifiable records</strong> — state dental/medical board disciplinary actions, court judgments, or licensing sanctions — never from anonymous claims, which carry serious defamation and legal risk.
+  </div>
+
+  <h3 style="margin:28px 0 4px">Sample entries <span style="color:var(--ink-soft);font-weight:600;font-size:14px">— fictional placeholders</span></h3>
+  <div class="grid" style="padding-bottom:24px">
+    <article class="card">
+      <div class="top"><div><h3>Dr. Jane Doe (fictional)</h3><div class="creds">DDS — Example City, ST</div></div><div class="badges"><span class="badge shame">⛔ Watchlist</span></div></div>
+      <div class="tags"><span class="tag">Board action</span><span class="tag">Billing</span></div>
+      <div class="note"><em>Placeholder:</em> would cite a documented board disciplinary action with case number + date.</div>
+      <div class="actions"><a href="#sources">↳ How a real entry is sourced</a></div>
+    </article>
+    <article class="card">
+      <div class="top"><div><h3>Dr. John Roe (fictional)</h3><div class="creds">DMD — Example City, ST</div></div><div class="badges"><span class="badge shame">⛔ Watchlist</span></div></div>
+      <div class="tags"><span class="tag">License suspended</span></div>
+      <div class="note"><em>Placeholder:</em> would link to the official state board order, not hearsay.</div>
+      <div class="actions"><a href="#sources">↳ How a real entry is sourced</a></div>
+    </article>
+    <article class="card">
+      <div class="top"><div><h3>Example Ortho Group (fictional)</h3><div class="creds">Practice — Example City, ST</div></div><div class="badges"><span class="badge shame">⛔ Watchlist</span></div></div>
+      <div class="tags"><span class="tag">Court judgment</span><span class="tag">Refund disputes</span></div>
+      <div class="note"><em>Placeholder:</em> would reference a public court judgment with docket number.</div>
+      <div class="actions"><a href="#sources">↳ How a real entry is sourced</a></div>
+    </article>
+  </div>
+
+  <section id="sources" class="prop" style="margin:16px 0 28px">
+    <h3>Verify any provider yourself (real, public sources)</h3>
+    <p style="color:var(--ink-soft)">This is the legitimate basis for a watchlist — check official records directly:</p>
+    <ul style="color:var(--ink-soft);line-height:1.9">
+      <li><a href="https://www.docinfo.org/" target="_blank" rel="noopener">FSMB DocInfo</a> — physician (MD/DO) license status &amp; board actions, all 50 states.</li>
+      <li><a href="https://www.aadb.org/" target="_blank" rel="noopener">AADB</a> — directory of state <em>dental</em> boards; each board posts disciplinary actions.</li>
+      <li><a href="https://npiregistry.cms.hhs.gov/" target="_blank" rel="noopener">NPI Registry</a> — confirm a provider's identity, specialty, and practice location.</li>
+      <li>Your <strong>state dental board</strong> "license lookup / disciplinary actions" page (search "[your state] dental board license verification").</li>
+    </ul>
+  </section>
+
+  <h3 style="margin:8px 0 4px">Report a provider (demo)</h3>
+  <p style="color:var(--ink-soft);max-width:680px">A real intake would require a <strong>link to an official record</strong> (board order, court docket) before anything is published. Demo form only — opens your email client; nothing is stored.</p>
+  <form id="reportForm" class="prop" style="max-width:620px;margin:16px 0 64px;display:grid;gap:14px">
+    <label>Provider name<br><input name="prov" required style="width:100%;padding:11px 14px;border:1px solid var(--line);border-radius:10px;font-size:15px;margin-top:6px"></label>
+    <label>Link to official record (board order / court docket)<br><input name="record" type="url" placeholder="https://…" required style="width:100%;padding:11px 14px;border:1px solid var(--line);border-radius:10px;font-size:15px;margin-top:6px"></label>
+    <label>What happened?<br><textarea name="msg" rows="4" required style="width:100%;padding:11px 14px;border:1px solid var(--line);border-radius:10px;font-size:15px;margin-top:6px;font-family:inherit"></textarea></label>
+    <button class="btn btn-primary" type="submit" style="justify-self:start">Submit report →</button>
+  </form>
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <div>© <span id="yr"></span> zzzwell — demo directory.</div>
+    <div class="foot-links"><a href="index.html">Home</a><a href="advocates.html">Advocates</a></div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+document.getElementById('reportForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const f=e.target;
+  if(!f.record.value){alert('A link to an official public record is required.');return;}
+  const body=encodeURIComponent(`Provider: ${f.prov.value}\nOfficial record: ${f.record.value}\n\n${f.msg.value}`);
+  window.location.href=`mailto:reports@zzzwell.example?subject=${encodeURIComponent('Provider report (with record)')}&body=${body}`;
+});
+</script>
+</body>
+</html>

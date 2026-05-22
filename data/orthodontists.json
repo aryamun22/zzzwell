@@ -317,5 +317,73 @@
   ],
   "note": "Airway-orthodontics educator; expansive (non-retractive) approach.",
   "source": "community"
+ },
+ {
+  "name": "Zubad Newaz",
+  "credentials": "DDS",
+  "org": "TMJ \u00b7 Sleep \u00b7 Airway Orthodontics",
+  "city": "New York",
+  "state": "NY",
+  "country": "US",
+  "tags": [
+   "MSE",
+   "FME",
+   "UARS",
+   "TMJ",
+   "Airway"
+  ],
+  "note": "Board-certified orthodontist + oral/maxillofacial radiologist; MSE/FME provider. Locations: NYC, Williston VT, Ponte Vedra Beach FL. Prominent airway-expansion educator.",
+  "source": "community",
+  "featured": true
+ },
+ {
+  "name": "Team Dental (Facegenics FME)",
+  "credentials": "DDS/DMD",
+  "org": "Team Dental",
+  "city": "New York / Philadelphia",
+  "state": "NY/PA",
+  "country": "US",
+  "tags": [
+   "FME",
+   "Facegenics",
+   "MSE",
+   "Airway"
+  ],
+  "note": "Certified Facegenics Midface Expander (FME) providers serving NYC and Philadelphia.",
+  "source": "community",
+  "featured": true
+ },
+ {
+  "name": "Elara Orthodontics (Abedini & Elkenawy)",
+  "credentials": "DDS",
+  "org": "Elara Orthodontics",
+  "city": "Richmond / Houston Heights",
+  "state": "VA/TX",
+  "country": "US",
+  "tags": [
+   "MSE",
+   "MARPE",
+   "FME",
+   "Airway",
+   "Research"
+  ],
+  "note": "Among the few orthodontists actively publishing research on skeletal expansion + airway. FME/MSE providers.",
+  "source": "community",
+  "featured": true
+ },
+ {
+  "name": "Dr. Koval",
+  "credentials": "DDS",
+  "org": "Koval Orthodontics",
+  "city": "Boca Raton",
+  "state": "FL",
+  "country": "US",
+  "tags": [
+   "FME",
+   "Facegenics",
+   "Airway"
+  ],
+  "note": "Offers the Facegenics Midfacial Expander (FME).",
+  "source": "community"
  }
 ]
