@@ -76,6 +76,27 @@
     <button class="btn btn-primary" id="fwdBtn" style="margin-top:14px">Pay &amp; forward (demo) →</button>
     <div id="fwdState"></div>
   </div>
+
+  <!-- 5. Watch & learn: YouTube video library -->
+  <div class="module" id="videos">
+    <h3>⑤ Watch &amp; learn</h3>
+    <p class="sub">Search patient-education videos from trusted creators. Type a question and search YouTube, scope it to a channel, or browse topics.</p>
+    <div class="row-input">
+      <input id="vq" placeholder="e.g. MARPE recovery, CPAP pressure, MMA before after">
+      <select id="vscope" class="field" style="max-width:200px"></select>
+      <button class="btn btn-primary" id="vsearch">Search YouTube →</button>
+    </div>
+    <div class="filters" id="vtopics" style="margin-top:12px"></div>
+
+    <div class="creator-row" id="creators"></div>
+
+    <h4 style="margin:8px 0 0;color:var(--ink)">Featured</h4>
+    <div class="vid-grid">
+      <div><div class="vid"><iframe src="https://www.youtube-nocookie.com/embed/kp5o3NDaZy8" title="JawHacks" loading="lazy" allowfullscreen></iframe></div><div class="vid-cap">JawHacks — “The Geometry of Jaw Surgery: Balancing Airway &amp; Aesthetics”</div></div>
+      <div><div class="vid"><iframe src="https://www.youtube-nocookie.com/embed/zUjiDVYLo-s" title="CPAP friend" loading="lazy" allowfullscreen></iframe></div><div class="vid-cap">CPAP friend — “Sleep apnea: what I wish I knew from the start”</div></div>
+    </div>
+    <p class="sub" style="margin-top:12px">Videos are third-party educational content (not medical advice) and embedded from YouTube; zzzwell is not affiliated with these creators.</p>
+  </div>
 </main>
 
 <footer>
@@ -182,6 +203,37 @@ document.getElementById('fwdBtn').onclick=()=>{
     Included: ${n} symptom ${n===1?'entry':'entries'}${ehr?`, linked records from ${ehr.payer}`:''}, and your saved questions.<br>
     You're <b>#${pos}</b> in their scheduling queue — auto-assigned by the doctor's intake settings.</div>`;
 };
+
+/* ---- 5. Watch & learn: YouTube video library ---- */
+const creators = [
+  {name:'JawHacks', who:'Ronald Ead — expanders, MMA, mewing', handle:'JawHacks', url:'https://www.youtube.com/@JawHacks'},
+  {name:'CPAP friend', who:'Andrew McGinn, RPSGT — PAP therapy, OSCAR', handle:'CPAPfriend', url:'https://www.youtube.com/@CPAPfriend'},
+  {name:'The Breathe Institute', who:'Dr. Soroush Zaghi — airway, tongue-tie', handle:null, url:'https://www.youtube.com/results?search_query=Soroush+Zaghi+breathe+institute'},
+  {name:'TheLankyLefty27', who:'Sleep apnea & CPAP coaching', handle:null, url:'https://www.youtube.com/@TheLankyLefty27'},
+];
+const topics = ['MMA before/after','MARPE recovery','MSE expansion','CPAP pressure','OSCAR data','mewing','UARS','jaw surgery recovery'];
+
+const vq = document.getElementById('vq');
+const vscope = document.getElementById('vscope');
+vscope.innerHTML = '<option value="">All of YouTube</option>' + creators.map(c=>`<option value="${c.handle?('@'+c.handle):c.name}">Scope: ${c.name}</option>`).join('');
+
+function ytSearch(){
+  const term = (vq.value.trim() || 'sleep apnea airway');
+  const scope = vscope.value ? (' ' + vscope.value) : '';
+  window.open('https://www.youtube.com/results?search_query=' + encodeURIComponent(term + scope), '_blank', 'noopener');
+}
+document.getElementById('vsearch').onclick = ytSearch;
+vq.addEventListener('keydown', e=>{ if(e.key==='Enter') ytSearch(); });
+
+document.getElementById('vtopics').innerHTML = topics.map(t=>`<button class="chip" data-t="${t}">${t}</button>`).join('');
+document.getElementById('vtopics').addEventListener('click', e=>{
+  const b = e.target.closest('.chip'); if(!b) return;
+  vq.value = b.dataset.t; ytSearch();
+});
+
+document.getElementById('creators').innerHTML = creators.map(c=>`
+  <div class="creator"><b>${c.name}</b><span>${c.who}</span>
+  <a href="${c.url}" target="_blank" rel="noopener">Open channel →</a></div>`).join('');
 </script>
 </body>
 </html>
