@@ -1,0 +1,14 @@
+{
+ "agents": [
+   {"name":"Claude","desc":"Anthropic assistant"},
+   {"name":"ChatGPT","desc":"OpenAI assistant"},
+   {"name":"Your custom agent","desc":"Connect via API key"},
+   {"name":"Perplexity","desc":"Research assistant"}
+ ],
+ "data": [
+   {"name":"Apple Health","desc":"Sleep, HR, activity"},
+   {"name":"Sleep study (PSG/HSAT)","desc":"Upload PDF/EDF"},
+   {"name":"CPAP / OSCAR data","desc":"AHI, usage, leaks"},
+   {"name":"Oura / Whoop","desc":"Wearable sleep data"}
+ ]
+}

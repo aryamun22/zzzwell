@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Agents &amp; Data — zzzwell</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html"><span class="dot"></span> zzzwell</a>
+    <nav class="nav-links">
+      <a href="sleep.html">Sleep Medicine</a>
+      <a href="orthodontists.html">Orthodontists</a>
+      <a href="omfs.html">Jaw Surgeons</a>
+      <a href="glp1.html">GLP-1 for OSA</a>
+      <a href="pap-labs.html">PAP &amp; Sleep Labs</a>
+      <a href="advocates.html">Advocates</a>
+      <a href="hall-of-shame.html">Hall of Shame</a>
+      <a href="marketplace.html">Marketplace</a>
+      <a href="bundles.html">Bundles</a>
+      <a href="patient.html">Patient Hub</a>
+      <a href="agents.html" class="active">AI Agents</a>
+      <a href="videos.html">Videos</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="section-head">
+    <span class="eyebrow">Personalize</span>
+    <h2>Connect your AI agent &amp; your data</h2>
+    <p>Link an assistant and your health data so recommendations are tailored to you. Demo toggles — nothing is actually connected, transmitted, or stored.</p>
+  </section>
+
+  <div class="connect">
+    <b style="color:var(--ink)">AI agents</b>
+    <div class="connect-grid" id="agents"></div>
+    <b style="color:var(--ink);display:block;margin-top:20px">Your data</b>
+    <div class="connect-grid" id="data"></div>
+    <div class="disclaimer" style="margin:18px 0 0">
+      <strong>Privacy:</strong> a real version would use OAuth scopes and encryption, never store credentials in the browser, and let you revoke access anytime. Health data is sensitive — connect only with informed consent.
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <div>© <span id="yr"></span> zzzwell — demo directory.</div>
+    <div class="foot-links"><a href="index.html">Home</a><a href="patient.html">Patient Hub</a><a href="videos.html">Videos</a></div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+function connectCards(list){
+  return list.map(o=>`
+    <div class="connect-card">
+      <div class="l"><b>${o.name}</b><span>${o.desc}</span></div>
+      <button class="btn btn-ghost" style="padding:8px 16px;font-size:13px" onclick="
+        const c=this.closest('.connect-card');const on=c.classList.toggle('on');
+        this.textContent=on?'Disconnect':'Connect';
+        c.querySelector('.status')?.remove();
+        if(on){const s=document.createElement('span');s.className='status';s.textContent='Connected (demo)';c.querySelector('.l').appendChild(s);}
+      ">Connect</button>
+    </div>`).join('');
+}
+(async function(){
+  let d;
+  try { d = await (await fetch('data/agents.json')).json(); }
+  catch(e){ document.getElementById('agents').innerHTML='<div class="empty">Serve over http to load.</div>'; return; }
+  document.getElementById('agents').innerHTML=connectCards(d.agents);
+  document.getElementById('data').innerHTML=connectCards(d.data);
+})();
+</script>
+</body>
+</html>
