@@ -1,0 +1,215 @@
+[
+ {
+  "name": "BPC-157",
+  "category": "Peptides",
+  "status": "Research use only \u2014 not approved for human use in the U.S.",
+  "status_class": "research",
+  "tags": [
+   "Recovery research"
+  ],
+  "note": "Synthetic peptide studied in animal models. Sold by labs labeled 'not for human consumption.'"
+ },
+ {
+  "name": "TB-500 (Thymosin \u03b24)",
+  "category": "Peptides",
+  "status": "Research use only \u2014 not approved for human use in the U.S.",
+  "status_class": "research",
+  "tags": [
+   "Recovery research"
+  ],
+  "note": "Research peptide; no FDA-approved human indication."
+ },
+ {
+  "name": "GHK-Cu",
+  "category": "Peptides",
+  "status": "Research use only \u2014 not approved for human use in the U.S.",
+  "status_class": "research",
+  "tags": [
+   "Skin research"
+  ],
+  "note": "Copper peptide used in topical cosmetic research."
+ },
+ {
+  "name": "Ipamorelin",
+  "category": "Peptides",
+  "status": "Research use only \u2014 not approved for human use in the U.S.",
+  "status_class": "research",
+  "tags": [
+   "GH secretagogue"
+  ],
+  "note": "Growth-hormone-secretagogue research compound."
+ },
+ {
+  "name": "CJC-1295",
+  "category": "Peptides",
+  "status": "Research use only \u2014 not approved for human use in the U.S.",
+  "status_class": "research",
+  "tags": [
+   "GH secretagogue"
+  ],
+  "note": "Research compound; not approved for human use."
+ },
+ {
+  "name": "Selank",
+  "category": "Peptides",
+  "status": "Research use only \u2014 not approved for human use in the U.S.",
+  "status_class": "research",
+  "tags": [
+   "Anxiolytic research"
+  ],
+  "note": "Russian-developed research peptide."
+ },
+ {
+  "name": "Semax",
+  "category": "Peptides",
+  "status": "Research use only \u2014 not approved for human use in the U.S.",
+  "status_class": "research",
+  "tags": [
+   "Cognition research"
+  ],
+  "note": "Research peptide studied in cognition models."
+ },
+ {
+  "name": "Epitalon",
+  "category": "Peptides",
+  "status": "Research use only \u2014 not approved for human use in the U.S.",
+  "status_class": "research",
+  "tags": [
+   "Longevity research"
+  ],
+  "note": "Research compound; no approved human indication."
+ },
+ {
+  "name": "Thymosin Alpha-1",
+  "category": "Peptides",
+  "status": "Research use only \u2014 not approved for human use in the U.S.",
+  "status_class": "research",
+  "tags": [
+   "Immune research"
+  ],
+  "note": "Approved in some countries; not FDA-approved in the U.S."
+ },
+ {
+  "name": "Semaglutide (Ozempic/Wegovy)",
+  "category": "Peptides",
+  "status": "Prescription only (FDA-approved)",
+  "status_class": "rx",
+  "tags": [
+   "GLP-1",
+   "Metabolic"
+  ],
+  "note": "FDA-approved GLP-1; prescription required. See GLP-1 page for OSA context."
+ },
+ {
+  "name": "Tirzepatide (Mounjaro/Zepbound)",
+  "category": "Peptides",
+  "status": "Prescription only (FDA-approved)",
+  "status_class": "rx",
+  "tags": [
+   "GLP-1/GIP",
+   "OSA"
+  ],
+  "note": "FDA-approved; first drug indicated for moderate-severe OSA with obesity. Rx required."
+ },
+ {
+  "name": "Caffeine + L-Theanine",
+  "category": "Nootropics",
+  "status": "OTC dietary supplement",
+  "status_class": "otc",
+  "tags": [
+   "Focus",
+   "Stack"
+  ],
+  "note": "Common OTC focus stack."
+ },
+ {
+  "name": "Alpha-GPC",
+  "category": "Nootropics",
+  "status": "OTC dietary supplement",
+  "status_class": "otc",
+  "tags": [
+   "Choline"
+  ],
+  "note": "Choline-source dietary supplement."
+ },
+ {
+  "name": "L-Tyrosine",
+  "category": "Nootropics",
+  "status": "OTC dietary supplement",
+  "status_class": "otc",
+  "tags": [
+   "Amino acid"
+  ],
+  "note": "Amino-acid dietary supplement."
+ },
+ {
+  "name": "Lion's Mane",
+  "category": "Nootropics",
+  "status": "OTC dietary supplement",
+  "status_class": "otc",
+  "tags": [
+   "Mushroom"
+  ],
+  "note": "Mushroom extract dietary supplement."
+ },
+ {
+  "name": "Bacopa Monnieri",
+  "category": "Nootropics",
+  "status": "OTC dietary supplement",
+  "status_class": "otc",
+  "tags": [
+   "Herbal"
+  ],
+  "note": "Herbal dietary supplement."
+ },
+ {
+  "name": "Rhodiola Rosea",
+  "category": "Nootropics",
+  "status": "OTC dietary supplement",
+  "status_class": "otc",
+  "tags": [
+   "Adaptogen"
+  ],
+  "note": "Adaptogen dietary supplement."
+ },
+ {
+  "name": "Creatine Monohydrate",
+  "category": "Nootropics",
+  "status": "OTC dietary supplement",
+  "status_class": "otc",
+  "tags": [
+   "Cognitive/physical"
+  ],
+  "note": "Well-studied OTC supplement."
+ },
+ {
+  "name": "Magnesium L-Threonate",
+  "category": "Nootropics",
+  "status": "OTC dietary supplement",
+  "status_class": "otc",
+  "tags": [
+   "Mineral"
+  ],
+  "note": "Magnesium-form dietary supplement."
+ },
+ {
+  "name": "Modafinil",
+  "category": "Nootropics",
+  "status": "Prescription only (FDA-approved)",
+  "status_class": "rx",
+  "tags": [
+   "Wakefulness"
+  ],
+  "note": "FDA-approved for narcolepsy/shift-work/OSA-related sleepiness; Rx required."
+ },
+ {
+  "name": "Piracetam",
+  "category": "Nootropics",
+  "status": "Prescription / not a U.S. dietary supplement",
+  "status_class": "gray",
+  "tags": [
+   "Racetam"
+  ],
+  "note": "Not FDA-approved and not marketable as a U.S. dietary supplement."
+ }
+]

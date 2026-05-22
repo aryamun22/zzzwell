@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Peptide &amp; Nootropic Marketplace (Demo) — zzzwell</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html"><span class="dot"></span> zzzwell</a>
+    <nav class="nav-links">
+      <a href="sleep.html">Sleep Medicine</a>
+      <a href="orthodontists.html">Orthodontists</a>
+      <a href="omfs.html">Jaw Surgeons</a>
+      <a href="glp1.html">GLP-1 for OSA</a>
+      <a href="pap-labs.html">PAP &amp; Sleep Labs</a>
+      <a href="advocates.html">Advocates</a>
+      <a href="hall-of-shame.html">Hall of Shame</a>
+      <a href="marketplace.html" class="active">Marketplace</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="section-head">
+    <span class="eyebrow">Catalog</span>
+    <h2>Peptide &amp; Nootropic Marketplace <span style="font-size:.5em;color:var(--ink-soft);font-weight:700">(DEMO)</span></h2>
+    <p>A demonstration catalog that surfaces each compound's <strong>regulatory status</strong> up front — so it's clear what's an OTC supplement, what's prescription-only, and what's sold "research use only."</p>
+  </section>
+
+  <div class="disclaimer" style="background:#fde8e6;border-color:#f4b5b0;color:#8a2018">
+    <strong>⚠️ Demo only — nothing is for sale here.</strong> No checkout, no vendor, no purchasing. Listings carry <strong>no efficacy or health claims</strong>. Many peptides are <strong>not approved for human use</strong> and are sold elsewhere labeled "research use only"; prescription items require a licensed prescriber. This is not medical advice — talk to a clinician before using anything.
+  </div>
+
+  <div id="market"></div>
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <div>© <span id="yr"></span> zzzwell — demo directory.</div>
+    <div class="foot-links"><a href="index.html">Home</a><a href="glp1.html">GLP-1</a><a href="advocates.html">Advocates</a></div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+(async function(){
+  const el=document.getElementById('market');
+  let items;
+  try { items=await (await fetch('data/marketplace.json')).json(); }
+  catch(e){ el.innerHTML='<div class="empty">Could not load catalog. Serve over http (python3 -m http.server).</div>'; return; }
+
+  const statusLabel={rx:'Rx only',otc:'OTC supplement',research:'Research use only',gray:'Not FDA / not supplement'};
+  function card(p){
+    const tags=(p.tags||[]).map(t=>`<span class="tag">${t}</span>`).join('');
+    return `<article class="card" data-search="${(p.name+' '+(p.tags||[]).join(' ')+' '+p.category).toLowerCase()}" data-cat="${p.category.toLowerCase()}" data-status="${p.status_class}">
+      <div class="top"><div><h3>${p.name}</h3><div class="creds">${p.category}</div></div>
+      <div class="badges"><span class="badge ${p.status_class}">${statusLabel[p.status_class]}</span></div></div>
+      ${tags?`<div class="tags">${tags}</div>`:''}
+      <div class="note"><strong>Status:</strong> ${p.status}</div>
+      <div class="note">${p.note}</div>
+    </article>`;
+  }
+
+  const cats=['All','Peptides','Nootropics'];
+  const statuses=[['','All statuses'],['otc','OTC supplement'],['rx','Rx only'],['research','Research use only'],['gray','Gray-market']];
+  el.innerHTML=`
+    <div class="toolbar">
+      <label class="search">🔎 <input id="q" placeholder="Search compounds…"></label>
+      <span class="count" id="count"></span>
+    </div>
+    <div class="filters" id="cats">${cats.map((c,i)=>`<button class="chip ${i===0?'active':''}" data-cat="${c==='All'?'':c.toLowerCase()}">${c}</button>`).join('')}</div>
+    <div class="filters" id="stat" style="margin-top:8px">${statuses.map((s,i)=>`<button class="chip ${i===0?'active':''}" data-status="${s[0]}">${s[1]}</button>`).join('')}</div>
+    <div class="grid" id="grid">${items.map(card).join('')}</div>`;
+
+  const grid=el.querySelector('#grid'), q=el.querySelector('#q'), count=el.querySelector('#count');
+  let cat='', stat='';
+  function apply(){
+    const term=q.value.trim().toLowerCase(); let shown=0;
+    grid.querySelectorAll('.card').forEach(c=>{
+      const ok=(!term||c.dataset.search.includes(term))&&(!cat||c.dataset.cat===cat)&&(!stat||c.dataset.status===stat);
+      c.style.display=ok?'':'none'; if(ok)shown++;
+    });
+    count.textContent=`${shown} item${shown===1?'':'s'}`;
+  }
+  q.addEventListener('input',apply);
+  el.querySelector('#cats').addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b)return;el.querySelectorAll('#cats .chip').forEach(x=>x.classList.remove('active'));b.classList.add('active');cat=b.dataset.cat;apply();});
+  el.querySelector('#stat').addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b)return;el.querySelectorAll('#stat .chip').forEach(x=>x.classList.remove('active'));b.classList.add('active');stat=b.dataset.status;apply();});
+  apply();
+})();
+</script>
+</body>
+</html>
